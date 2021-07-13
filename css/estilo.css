@@ -1,0 +1,27 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  background-color: #DEDEDE;
+}
+
+
+section:nth-child(1) {
+  height: 100vh;
+}
+
+section .col-6 {
+  margin: auto;
+}
+
+.section-2 i {
+  font-size: 5rem;
+}
+
+.section-gallery .card {
+  transition: 1s;
+}
+
+.section-gallery .card:hover {
+  transform: scale(0.8);
+  transition: 1s;
+}
