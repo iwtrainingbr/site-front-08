@@ -25,3 +25,7 @@ section .col-6 {
   transform: scale(0.8);
   transition: 1s;
 }
+
+.card-diferencial:hover{
+  background-color:#C0C0C0;
+}
