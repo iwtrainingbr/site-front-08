@@ -11,7 +11,40 @@
     <link rel="stylesheet" href="css/estilo.css">
   </head>
   <body class="container">
-    <section class="row">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-secondary" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <section class="row mt-5">
       <div class="col-6 text-center">
         <img width="80%" src="img/header.svg" alt="">
       </div>
@@ -40,7 +73,8 @@
       </div>
 
       <div class="col-4 text-center">
-        <article class="card card-body">
+        <article class="card card-body card-diferencial">
+
           <i class="material-icons">favorite</i>
 
           <br>
@@ -52,7 +86,7 @@
       </div>
 
       <div class="col-4 text-center">
-        <article class="card card-body">
+        <article class="card card-body card-diferencial">
           <i class="material-icons">group</i>
           <br>
 
@@ -62,7 +96,7 @@
         </article>
       </div>
       <div class="col-4 text-center">
-        <article class="card card-body">
+        <article class="card card-body card-diferencial">
           <i class="material-icons">paid</i>
            <br>
 
@@ -190,6 +224,13 @@
     <hr class="mt-5 mb-5">
 
     <section class="row mt-5">
+      <div class="col-12 text-center mt-5">
+        <h2>FALE CONOSCO</h2>
+        <p class="text-muted">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+
       <div class="col-6 text-center">
         <div class="card card-body">
           <p>Rua Carolino de Aquino, 445 - Fátima - Fortaleza-CE</p>
