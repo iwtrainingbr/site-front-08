@@ -29,3 +29,11 @@ section .col-6 {
 .card-diferencial:hover{
   background-color:#C0C0C0;
 }
+
+input::placeholder {
+  color: red;
+}
+
+textarea::placeholder {
+  color: red;
+}

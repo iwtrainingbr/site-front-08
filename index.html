@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Site da turma FRONT 08</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
@@ -12,11 +13,13 @@
 
     <link rel="stylesheet" href="css/estilo.css">
 
+
+
   </head>
   <!-- Início da Navbar -->
   <body class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
+      <div class= "container-fluid">
         <a class="navbar-brand" href="#inicio">Logo do site</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -264,17 +267,20 @@
         <div class="card card-body bg-dark text-white">
           <h3>CONTATO</h3>
 
-          <form action="#">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" class="form-control">
+          <form id="form-contato" onsubmit="validarForm()">
+            <label for="nome">Nome</label> <br>
+            <small id="erro_nome" class="text-danger d-none">&#10008; Ops! Acho que você escreveu um nome muito curto</small>
+            <input placeholder="Nos diga o seu nome para que possamos conversar com você" type="text" id="nome" class="form-control">
             <br>
 
-            <label for="telefone">Telefone/Whatsapp</label>
-            <input type="text" id="telefone" class="form-control">
+            <label for="telefone">Telefone/Whatsapp</label> <br>
+            <small id="erro_telefone" class="text-danger d-none">&#10008; Macacos me mordam! Parece que esse número de telefone é inválido </small>
+            <input placeholder="Digite aqui seu telefone para que possamos entrar em contato com você" type="text" id="telefone" class="form-control">
             <br>
 
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" class="form-control"></textarea>
+            <label for="mensagem">Mensagem</label> <br>
+            <small id="erro_mensagem" class="text-danger d-none"> &#10008; Poxa, que mensagem curtinha! Escreve algo maiorzinho aí vai! </small>
+            <textarea placeholder="Escreva aqui o porquê deseja nos contatar" id="mensagem" class="form-control"></textarea>
             <br>
 
             <button class="btn-primary btn-lg">ENVIAR</button>
@@ -295,5 +301,28 @@
       </div>
     </section>
   <!-- Fim do Rodapé -->
-  </body>
+
+  <!-- MODAL  -->
+<div id="modal_contato" class="modal modal-dialog-centered d-none">
+  <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title">Obrigado por entrar em contato conosco!</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body alert-success" style="margin: 10px; border: 1px solid black;">
+       <h6> <strong> Seu fomulário foi enviado! </strong><h6>
+         <p> Em breve entraremos em contato pelo número de telefone preenchido. Fique atento ao celular!</p>
+     </div>
+     <div class="modal-footer">
+       <button onclick="modal_contato_fechar()" type="button" class="btn btn-primary">Fechar</button>
+     </div>
+   </div>
+ </div>
+</div>
+
+
+<!-- JavaScript Bundle with Popper -->
+  <script src="js/validar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </html>
